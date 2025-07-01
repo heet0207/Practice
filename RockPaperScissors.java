@@ -26,7 +26,7 @@ public class RockPaperScissors {
             if (!validChoice) {
                 System.out.println("Invalid choice. Please try again.");
                 continue;
-            }   
+            }
 
             // Computer's choice using Math.random()
             int computerIndex = (int) (Math.random() * 3);
@@ -38,8 +38,8 @@ public class RockPaperScissors {
             if (userChoice.equalsIgnoreCase(computerChoice)) {
                 System.out.println("It's a tie!");
             } else if ((userChoice.equalsIgnoreCase("Rock") && computerChoice.equals("Scissors")) ||
-                       (userChoice.equalsIgnoreCase("Paper") && computerChoice.equals("Rock")) ||
-                       (userChoice.equalsIgnoreCase("Scissors") && computerChoice.equals("Paper"))) {
+                    (userChoice.equalsIgnoreCase("Paper") && computerChoice.equals("Rock")) ||
+                    (userChoice.equalsIgnoreCase("Scissors") && computerChoice.equals("Paper"))) {
                 System.out.println("You win!");
             } else {
                 System.out.println("You lose!");
