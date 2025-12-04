@@ -1,10 +1,13 @@
 import java.io.*;
 class Que2 {
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) throws FileNotFoundException, IOException {
         FileReader fr = new FileReader("input.txt");
         BufferedReader br = new BufferedReader(fr);
 
+        @SuppressWarnings("unused")
         int Even = 0;
+        @SuppressWarnings("unused")
         int Odd = 0;
         
         String y = br.readLine();
