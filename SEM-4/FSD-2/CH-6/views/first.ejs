@@ -1,10 +1,22 @@
+<html>
+
 <body>
     <h1>Good Morning</h1>
-    <h2><%= Name %> </h2>
+    <h2>
+        <%= name %>
+    </h2>
     <%# This Is a Comment %>
-    <p> <%% This is EJS %> </p>
-    <% Let first = "<b> Heet </b>" %>
-    <p> <%= first %> </p>
-    <% let age = "<b> 32 </b>" %>
-    <p> <%= age %> </p>
+        <p>
+            <%% This is EJS %>
+        </p>
+        <% let first="<b> Heet </b>" %>
+            <p>
+                <%= first %>
+            </p>
+            <% let age="<b> 32 </b>" %>
+                <p>
+                    <%- age %>
+                </p>
 </body>
+
+</html>
