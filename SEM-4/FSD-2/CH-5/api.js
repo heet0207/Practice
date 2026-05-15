@@ -24,8 +24,8 @@ router.get("/",(req,res)=>{
     }
 });
 
-router.get("/:a", (req, res) => {
-    var current = data.filter((b)=>b.id == res.parmas.id);
+router.get("/id/:a", (req, res) => {
+    var current = data.filter((b)=>b.id == res.parmas.a);
     if(current.length > 0 ){
         res.send(current);
     }
@@ -34,8 +34,8 @@ router.get("/:a", (req, res) => {
     }
 });
 
-router.get('/branch/:branch',(req,res)=>{
-    var cd = data.filter((d)=> d.branch.toLowercase() == req.params.branch.toLowerCase());
+router.get('/branch/:p',(req,res)=>{
+    var cd = data.filter((d)=> d.branch.toLowercase() == req.params.p.toLowerCase());
     if(cd.length > 0){
         res.send(cd);
     }
