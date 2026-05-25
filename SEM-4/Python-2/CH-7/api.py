@@ -98,3 +98,28 @@ def display_air_pollution():
     air_quality_index = pollution_data['main']['aqi']
     print('Air Quality:', quality_air_index.get(air_quality_index, 'Unknown'))
 display_air_pollution()
+
+
+import requests
+import json
+
+def display_forecast():
+    api_key = input('Enter API Key : ')
+    city = input('Enter City : ')
+    
+    request_url = (
+        'http://api.openweathermap.org/data/2.5/forecast?q='
+        +city
+        +'&appid='
+        +api_key
+        +'&units=metric'
+    )
+
+    response = requests.get(request_url)
+    forecast_data = response.json()
+
+    print(json.dumps(forecast_data, indent=2))
+
+display_forecast()
+
+
