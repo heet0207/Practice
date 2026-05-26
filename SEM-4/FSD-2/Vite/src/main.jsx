@@ -7,9 +7,10 @@ import './index.css'
 // import Btn from './btn.jsx';
 // import Btn from './btn1.jsx';
 // import Re1 from './re1.jsx';
-import Frm from './frm.jsx';
+// import Frm from './frm.jsx';
+import P1 from './p1.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Frm/>
+    <P1/>
   </StrictMode>,
 )
