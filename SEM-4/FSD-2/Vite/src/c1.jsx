@@ -1,9 +1,9 @@
 function Child(props){
     return(
         <div>
-            {props.data.map((item,index)=>{
+            {props.data.map((item)=>{
                 return(
-                    <div key={index}>
+                    <div>
                         <h2>Name: {item.name}</h2>
                         <p>Age: {item.age}</p>
                     </div>
