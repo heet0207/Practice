@@ -1,0 +1,334 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    scroll-behavior: smooth;
+}
+p a{
+    color: #f93939;
+}
+                             /* Navigation bar  */
+.navbar{
+    height: 65px;
+    position: sticky;
+    top: 0px;
+    z-index: 200;
+    background-color: whitesmoke;
+}
+/* logo  */
+.navbar a img{
+    width: 85px;
+    height: 75px;
+    margin-left: 66%;
+}
+
+/* items */
+nav{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul li{
+    list-style: none;
+    display: inline-block;
+    border-radius: 20px;
+    margin: 10px 30px;
+}
+ul li a{
+    color: black;
+    text-decoration: none;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 1.1rem;
+}
+
+ul li a:hover{
+    text-decoration-color: #012d78;
+    text-decoration-line: overline;
+}
+.items:active {
+    text-decoration-color: #012d78;
+    text-decoration-line: overline;
+}
+button{
+    background: none;
+    border: 2px solid #4f4f4f;
+    border-radius: 25px;
+    color: black;
+    cursor: pointer;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-left: 10px;
+    outline: 0;
+    overflow: hidden;
+    padding: 5px 15px;
+    font-size: 1rem;
+    transition: all 0.4s;
+    margin-right: 75px;
+}
+button:hover{
+    background-color: #012d78;
+    border-color: rgb(184, 177, 177);
+    text-shadow: 2px 2px 4px #201e1e;
+    color: white;
+    transform: translateY(-0.25em);
+}
+
+/* Details Section  */
+#details{
+    margin-left: 5%;
+    margin-top: 10%;
+}
+.hi p{
+    font-size: 3rem;
+}
+.name p{
+    font-size: 5rem;
+}
+.static{
+    font-size: 3rem;
+}
+.dynamic li{
+    font-size: 3.5rem;
+    font-family: 'Source Code Pro', monospace;
+    color: #012d78;
+}
+#details{
+    color: black;
+}
+.name p{
+    font-family: 'Fira Sans', sans-serif;
+}
+.hi p , .static p{
+    font-family: 'Source Code Pro', monospace;
+}
+.wrapper{
+    display: flex;
+}
+.dynamic{
+    margin: -14px 46px;
+    height: 90px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+}
+.dynamic li{
+    list-style: none;
+    position: relative;
+    top: 0;
+    animation: slide 7.2s steps(4) infinite; /* at every 1.5s typing slide is 6s*/
+}
+@keyframes slide{
+    100%{
+        top: -360px;
+    }
+}
+.dynamic li::after{
+    content: "";
+    position: absolute;
+    /* background-color: black;   */
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* border-left: 2px solid white; */
+    /* animation: typing 1.8s steps(10) infinite; */
+
+}
+/* @keyframes typing{
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+} */
+#container{
+    display: flex;
+    min-height: 85vh;
+    justify-content: space-around;
+}
+#logo img {
+    width: 430px;
+    height: 400px;
+    margin-top: 70px;
+    margin-left: 15px;
+    z-index: 100;
+}
+#logo img{
+    transition: 1.3s;
+}
+#logo img:hover{
+    border: 5px solid #012d78;
+    border-radius: 100%;
+    transform: scale(1.14);
+    z-index: 0.2;
+    cursor: pointer;
+}
+#social-icons img{
+    filter: invert(100%);
+    user-select: none;
+    height: 50px;
+    width: 50px;
+    margin-left: -20px;
+    display: inline-block;
+    fill: currentcolor;
+    flex-shrink: 0;
+    transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+#social-icons img:hover{
+    padding: 2px;
+    transition: all .2s ease-in;
+}
+#social-icons ul{
+    display: inline-block;
+}
+#social-icons ul{
+    display: flex;
+    flex-direction: column;
+}
+#social-icons{
+    background-color: hsla(0,0%,100%,.18);
+    right: 3%;
+    margin-top: 4%;
+    width: 5%;
+    position: fixed;
+    border-radius: 30px;
+}
+
+/* ABOUT ME */
+#abt-me{
+    align-items: center;
+    /* background: linear-gradient(to bottom left,#ffffff,#272727d9); */
+    background-color: ghostwhite;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+#about-wrapper{
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 80%;
+}
+#about-img img{
+    width: 320px;
+    height: 310px;
+    margin-top: 39px;
+    transition: 1.3s;
+    border-radius: 50%;
+}
+
+/* Same hover effect as h1 image */
+#about-img img:hover{
+    border: 5px solid #012d78;
+    border-radius: 100%;
+    transform: scale(1.14);
+    z-index: 0.2;
+    cursor: pointer;
+}
+#about-text h1{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2.5rem;
+    color: black;
+}
+#about-text p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+
+#about-text{
+    color: #000000;
+    flex: 1 1;
+    margin: 15px;
+    padding: 20px;
+}
+/* Experience */
+#exp{
+    font-size: 2.5rem;
+}
+#exphr{
+    width: 80%;
+    margin: auto;
+}
+.exp-container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    gap: 10px;
+}
+.head{
+    padding-bottom: 10px;
+}
+.details{
+    padding-top: 10px;
+}
+.exp-items{
+    padding:20px;
+    border-radius: 30px;
+    margin: auto;
+    background-color: ghostwhite;
+    width: 80%;
+}
+footer p{
+    color: black;
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 1%;
+}
+
+/* Social Media  */
+
+.social-media{
+    font-size: 1.5rem;
+}
+.social-media a{
+    color: #000000;
+    padding-inline: 10px;
+}
+.end{
+    width: 80%;
+    margin: auto;
+    background-color: #012d78;
+    margin-block: 5px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1239px){
+    #logo img {
+        width: 320px;
+        height: 310px;
+        margin-top: 39px;
+    }
+    #details {
+        margin-left: 5%;
+        margin-top: 6%;
+    }
+    #social-icons img {
+        filter: invert(100%);
+        user-select: none;
+        height: 40px;
+        width: 45px;
+        margin-left: -23px;
+        display: inline-block;
+        fill: currentcolor;
+        flex-shrink: 0;
+        transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    }
+}
+@media screen and (min-width:950px) {
+    .burger{
+        display: none;
+    }
+    
+}
+
+
+
+
+
+
+
