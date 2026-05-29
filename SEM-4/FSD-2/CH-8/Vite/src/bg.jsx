@@ -1,19 +1,19 @@
 import{ useState } from 'react';
 function Bg(){
-    const [color,setColor] = useState('burlywood')
+    const [color,setColor] = useState('lavender')
 
     function Change(){
-        setColor('aqua')
+        setColor('pink')
     }
     function Change1(){
-        setColor('brown')
+        setColor('burlywood')
     }
     function reset(){
-        setColor('burlywood')
+        setColor('lavender')
     }
 
     return(
-        <div style={{backgroundColor:color,width:'100vw',height:'100vh'}}>
+        <div style={{backgroundColor:color,width:'1000px',height:'1000px'}}>
             <button onClick={Change}>Change</button> <br/>
             <button onClick={Change1}>Change1</button> <br />
             <button onClick={reset}>Reset</button> <br />
