@@ -7,7 +7,9 @@ import h6 from './h6.jpeg';
 import { useState } from "react";
 
 function Btn1() {
-    const x = [h2, h3, h4, h5, h6];
+    const x = [h4, h3, h2, h5, h6];
+
+    setInterval(change, 3000);
 
     const [img, setImg] = useState(x[0]);
     function change(){
@@ -21,7 +23,7 @@ function Btn1() {
     return (
         <div className="btn1">
             <img src={img} alt="h" height='500px' width='500px' />
-            <button onClick={change}>Change</button>
+            {/* <button onClick={change}>Change</button> */}
             <button onClick={reset}>Reset</button>
         </div>
     );
