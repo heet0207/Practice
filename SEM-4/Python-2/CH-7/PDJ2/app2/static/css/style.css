@@ -1,0 +1,35 @@
+body{
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container{
+    text-align: center;
+    margin-top: 100px;
+}
+
+h1{
+    color: cadetblue;
+    font-weight: bolder;
+    font-display: swap;
+    background-color: darkmagenta;
+}
+
+p{
+    color: chartreuse;
+    font-size: 20px;
+    background-color: cornflowerblue;
+}
+
+button{
+    color: crimson;
+    background-color: coral;
+    border: 2px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.button.hover{
+    transform:rotate3d();
+    
+}
