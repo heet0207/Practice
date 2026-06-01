@@ -16,9 +16,11 @@ Including another URLconf
 """
 from django.contrib import admin # type:ignore
 from django.urls import path # type:ignore
-from mr.views import movie # type:ignore
+from mr import views as movie # type:ignore
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',movie.home)
+    path('',movie.home),
+    path('about/',movie.about),
+    path('signup/',movie.signup ,name='signup')
 ]
