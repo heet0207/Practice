@@ -8,9 +8,10 @@ import './index.css'
 // import F from './form.jsx'
 // import F1 from './form1.jsx'
 // import F2 from './form2.jsx'
-import Form from './formall.jsx'
+// import Form from './formall.jsx'
+import Parent from './parent.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Form/>
+    <Parent/>
   </StrictMode>,
 )
