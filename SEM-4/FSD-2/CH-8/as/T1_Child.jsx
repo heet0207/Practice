@@ -1,6 +1,5 @@
 import { useContext } from 'react';
 import {Fname,Lname} from './T1';
-;
 function T1_Child(){
 const a = parseInt(useContext(Fname))
 const b = parseInt(useContext(Lname))
