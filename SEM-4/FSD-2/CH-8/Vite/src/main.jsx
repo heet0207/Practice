@@ -9,9 +9,12 @@ import './index.css'
 // import F1 from './form1.jsx'
 // import F2 from './form2.jsx'
 // import Form from './formall.jsx'
-import Parent from './parent.jsx'
+// import Parent from './parent.jsx'
+// import T1 from './T1.jsx'
+// import T1Parent from './T1_Parent.jsx';
+import T1Parent from './T1_Parent.jsx';
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Parent/>
+    <T1Parent/>
   </StrictMode>,
 )
