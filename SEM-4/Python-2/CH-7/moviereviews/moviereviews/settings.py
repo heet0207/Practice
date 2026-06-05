@@ -53,16 +53,16 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'moviereviews.urls'
 import os
-STATIC_URL = 'static/'
+# STATIC_URL = 'static/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR,'media')
-MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+# MEDIA_URL = '/media/'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # Add the line below to DIRS:
-        'DIRS': [BASE_DIR / 'templates'],
+        'DIRS': [os.path.join(BASE_DIR , 'moviereviews/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
