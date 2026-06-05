@@ -1,7 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { createContext } from "react";
 import C1 from "./C1.jsx";
-
 export const A = createContext();
 export const B = createContext();
 function P1() {
