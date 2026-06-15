@@ -1,8 +1,8 @@
 import {useReducer} from 'react';
 function Reducer(co,action){
-    if(action.type ==='increment'|| co ===7) {
-        return co + 1,
-        console.log('Thala For Reason')
+    if(action.type ==='increment') {
+        return co + 1;
+        // console.log('Thala For Reason')
     }
 }
 function Ax2(){
