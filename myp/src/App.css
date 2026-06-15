@@ -1,4 +1,4 @@
-.counter {
+/* .counter {
   font-size: 16px;
   padding: 5px 10px;
   border-radius: 5px;
@@ -181,4 +181,15 @@
     right: 0;
     border-right-color: var(--border);
   }
+} */
+
+.main-container{
+  display:flex
+}
+.video-grid{
+  flex:1;
+  padding:20px;
+  display:grid;
+  grid-template-columns: 300px 300px 300px;
+  gap: 20px;
 }

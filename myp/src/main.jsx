@@ -1,12 +1,15 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-// import App from './App.jsx'
-// import P1 from './P1'
-// import UE1 from './UE1'
-import Ax2 from './ax2'
+// import Navbar from './Navbar.jsx'
+// import VideoCard from './VideoCard.jsx'
+// import Sidebar from './Sidebar.jsx'
+import App from './App.jsx'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Ax2/>
+     {/* <Navbar/> */}
+     {/* <VideoCard/> */}
+     {/* <Sidebar/> */}
+     <App/>
   </StrictMode>,
 )
