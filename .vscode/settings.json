@@ -2,13 +2,15 @@
     "C_Cpp.errorSquiggles": "disabled",
     "cSpell.words": [
         "Ahmedabad",
+        "conbitrib",
         "Maxage",
         "moviereviews",
         "mypic",
         "Nadiad",
         "newss",
         "Rajesh",
-        "Sharma"
+        "Sharma",
+        "signupaccount"
     ],
     "python-envs.defaultEnvManager": "ms-python.python:system"
 }
