@@ -1,0 +1,11 @@
+MongoDB Commands:-
+
+1.test > show dbs (test --> database) -- this command show list in database
+2.test >db  -- give u current database
+3. test > show collections
+4.test > use klm
+5.klm > db
+7. klm>db.createCollection("collectionName")
+8.db.collectionName.insertOne({ key: "value" })
+9.db.collectionName.insertMany([{ key: "value" },{ key: "value" }])
+10.db.collectionName.find()
