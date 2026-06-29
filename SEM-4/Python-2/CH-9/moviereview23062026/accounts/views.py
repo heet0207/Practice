@@ -17,7 +17,7 @@ def signupaccount(request):
                 login(request,user)
                 return redirect('home')
             except IntegrityError:
-                return render(request,'signupaccount.html',{'form':UserCreationForm,'error':'Username already exists'})
+                return render(request,'signupaccount.html',{'form':UserCreationForm,'error':'User already exists'})
         else:
             return render(request,'signupaccount.html',{'form':UserCreationForm,'error':'Password mismatch'})
 
@@ -29,8 +29,8 @@ def loginaccount(request):
     if request.method=='GET':
         return render(request,'loginaccount.html',{'form':AuthenticationForm})
     else:
-        user = authenticate(request,username=request.POST['username'])
-        password=request.POST['password']
+        user = authenticate(request,username=request.POST['username'],
+                password=request.POST['password'])
         if user is None:
             return render(request,'loginaccount.html',{'form':AuthenticationForm,
         'error':'Username and Password Do not Match'})
