@@ -1,75 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Sign Up</title>
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background:#f4f4f4;
-            display:flex;
-            justify-content:center;
-            align-items:center;
-            height:100vh;
-        }
 
-        .container{
-            background:white;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 0 10px rgba(0,0,0,0.1);
-            width:350px;
-        }
-
-        h1{
-            text-align:center;
-            margin-bottom:20px;
-        }
-
-        .error{
-            color:red;
-            text-align:center;
-            margin-bottom:10px;
-        }
-
-        button{
-            width:100%;
-            padding:10px;
-            background:#007bff;
-            color:white;
-            border:none;
-            border-radius:5px;
-            cursor:pointer;
-        }
-
-        button:hover{
-            background:#0056b3;
-        }
-
-        p{
-            margin-bottom:15px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <h1>Sign Up</h1>
-
-    {% if error %}
-        <div class="error">
-            {{ error }}
+{% extends 'base.html' %}
+{% block content %}
+<div class="card mb-3">
+    <div class="row g-0">
+        <div>
+            <div class="card-body">
+                <h5 class="card-title">Sign Up</h5>
+                {% if error %}
+                <div class="alert alert-danger mt-3" role="alert">
+                    {{ error }}
+                </div>
+                {% endif %}
+                <p class="card-text">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">
+                        Sign Up
+                    </button>
+                </form>
+                </p>
+            </div>
         </div>
-    {% endif %}
-
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-
-        <button type="submit">
-            Sign Up
-        </button>
-    </form>
+    </div>
 </div>
-
-</body>
-</html>
+{% endblock content %}

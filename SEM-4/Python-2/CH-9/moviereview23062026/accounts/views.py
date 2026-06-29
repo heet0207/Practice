@@ -4,6 +4,7 @@ from django.contrib.auth.forms import UserCreationForm,AuthenticationForm
 from django.contrib.auth.models import User
 from django.db import IntegrityError
 
+
 # Create your views here.
 def signupaccount(request):
     if request.method=='GET':
@@ -20,4 +21,19 @@ def signupaccount(request):
         else:
             return render(request,'signupaccount.html',{'form':UserCreationForm,'error':'Password mismatch'})
 
-            
+def logoutaccount(request):
+    logout(request)
+    return redirect('home')
+
+def loginaccount(request):
+    if request.method=='GET':
+        return render(request,'loginaccount.html',{'form':AuthenticationForm})
+    else:
+        user = authenticate(request,username=request.POST['username'])
+        password=request.POST['password']
+        if user is None:
+            return render(request,'loginaccount.html',{'form':AuthenticationForm,
+        'error':'Username and Password Do not Match'})
+        else:
+            login(request,user)
+            return redirect('home')

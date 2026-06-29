@@ -21,9 +21,12 @@
 			</button>
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav ms-auto">
-						<a class="nav-link" href="#">Logout {{ user.username }} </a>
-						<a class="nav-link" href="#">Login</a>
+					{% if user.is_authenticated %}
+						<a class="nav-link" href="{% url 'logoutaccount' %}">Logout {{ user.username }} </a>
+					{% else %}
+						<a class="nav-link" href="{% url 'loginaccount' %}">Login</a>
 						<a class="nav-link" href="{% url 'signupaccount' %}">Sign Up</a>
+					{% endif %}
 				</div>
 			</div>
 		</div>
@@ -37,7 +40,8 @@
 			© Copyright -
 			<a class="text-reset fw-bold text-decoration-none" target="_blank"
 			href="https://www.linkedin.com/in/abhishah/">
-			Abhi Shah
+			Heet Chauhan <br>
+			2026 🕷
 			</a> 
 		</div>
 	</footer>
