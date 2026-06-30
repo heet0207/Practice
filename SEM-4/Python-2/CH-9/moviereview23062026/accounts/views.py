@@ -30,7 +30,7 @@ def loginaccount(request):
         return render(request,'loginaccount.html',{'form':AuthenticationForm})
     else:
         user = authenticate(request,username=request.POST['username'],
-                password=request.POST['password'])
+                    password=request.POST['password'])
         if user is None:
             return render(request,'loginaccount.html',{'form':AuthenticationForm,
         'error':'Username and Password Do not Match'})

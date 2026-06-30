@@ -14,7 +14,8 @@
         "newss",
         "Rajesh",
         "Sharma",
-        "signupaccount"
+        "signupaccount",
+        "updatereview"
     ],
     "python-envs.defaultEnvManager": "ms-python.python:system"
 }

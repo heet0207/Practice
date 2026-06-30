@@ -17,9 +17,10 @@ def signup(request):
     {'email':email})
 def detail(request,movie_id):
     movie=get_object_or_404(Movie,pk=movie_id)
-    return render(request,'detail.html',{'movie':movie})
+    reviews = Review.objects.filter(movie = movie)
+    return render(request,'detail.html',{'movie':movie,'reviews':reviews})
 def createreview(request,movie_id):
-    movie = get_object_or_404(movie,pk=movie_id)
+    movie = get_object_or_404(Movie,pk=movie_id)
     if request.method == 'GET':
         return render(request,'createreview.html',{'form':ReviewForm(),'movie':movie})
     else:
@@ -32,3 +33,15 @@ def createreview(request,movie_id):
             return redirect('details',newReview.movie.id)
         except ValueError:
             return render(request,'createreview.html',{'form':ReviewForm(),'error':'bad data passed in'})
+def updatereview(request,review_id):
+    review = get_object_or_404(Review,pk=review_id,user=request.user)
+    if request.method == 'GET':
+        form = ReviewForm(instance=review)
+        return render(request,'updatereview.html',{'review':review,'form':form})
+    else:
+        try:
+            form = ReviewForm(request.POST,instance=review)
+            form.save()
+            return redirect('detail',review.movie.id)
+        except ValueError:
+            return render(request,'updatereview.html',{'review':review,'form':ReviewForm(),'error':'bad data in form'})
