@@ -1,0 +1,75 @@
+Commands
+
+1.select * from lju=>db.lju.find({},{})
+
+2.select id,name from lju=>db.lju.find({},{name:1})
+
+3.select name,status from lju=>db.lju.find({},{name:1,status:1,_id:0})
+
+4.select * from student where status="A"=>db.student.find({status:"A"})
+
+5.select name from abc where status!="A"=>db.abc.find({status:{$ne:"A"}},{_id:0,name:1})
+
+6.select * from lju where city="Abad"or gender="male"=>db.lju.find({$or:[{city:{$eq:"Abad"}},{gender:{$eq:"male"}}]})
+
+7.create table lju=>db.createCollection("lju")
+
+8.ALTER TABLE abc ADD join_date DATETIME=>db.abc.updateMany({},{$set:{join_date:newDate()}})
+
+9.ALTER TABLE lju drop column join_date=>db.lju.updateMany({},{$unset:{join_date:""}})
+
+10.select * from lju where status="A" ORDER BY age ASC=>db.lju.find({status:"A"}).sort({age:-1})
+
+11.select count(*) from lju where age>30=>db.lju.find({age:{$gt:30}}).count()
+
+12.select * from lju Limit 1=>db.lju.find().limit(1)
+
+13.select * from lju Limit 2 OFFSET 3=>db.lju.find().limit(2).skip(3)
+
+14.Update lju set age=age+3 where status="c" =>db.lju.updateMany({status:"c"},{$inc:{age:3}})
+
+15.select * from lju where name NOT IN ("aa","bb","cc")=>db.lju.find({name:{$nin:["aa","bb","cc"]}})
+
+16.Delete record of student if studard is 12 =>db.lju.deleteOne({studard:12})
+
+17.Retrive name of the employee with highest salary =>db.lju.fiind({},{name:1,_id:0}).sort({salary:-1}).limit(1)
+
+18.Give 5% salary raise to all "Data Scientist" =>db.emp.updateMany({dipt:"DataScientist"},{$mul:{salary:1.05}})
+
+19.Arrange all records in descending order of age => db.lju.find().sort({age:-1})
+
+20.show name of the student who is oldest among all => db.lju.find({},{name:1,_id:0}).sort({age:-1}).limit(1)
+
+21.find documents by  position "FULL STACK" =>db.lju.find({position:"FULL STACK"})
+
+22.Retrieve name of employee with lowest salary => db.employee.find({},{name:1,_id:0}).sort({salary:1}).limit(1)
+
+23.retrieve name of employee whose age is greater than or eq to 25 and less than or eq to 40 =>db.emp.find({$and:[{age:{$gte:25}},{age:{$lte:40}}]},{name:1,_id:0})
+
+24.count num of employee who have salary greater than 50000=>db.employees.find({ salary: { $gt: 50000 } }).count()
+
+25.retrive employees who are either "software dev" or "full stack" and age below 30  =>db.employees.find({$or: [{ position: "software dev" },{ position: "full stack" }],age: { $lt: 30 }})
+
+26.increase salary of an employee who has salary less than 50000 by 20%  =>db.employees.updateOne({ salary: { $lt: 50000 } },{ $inc: { salary: 10000 } })
+
+27.display price & brand of product which are of pug dog =>db.lju.find({dog:pug},{price:1,brand:1,_id:0)
+
+28.increase price of each Samsung products by 1000 =>db.products.UpdateMany({brand:"Samsung"},{$inc:{price:1000}})
+
+29.update all vivo products by adding field quantity & add random values =>db.lju.updateMany({brand:"vivo"},{$set:{quantity:3}})
+
+30.display price of products which are of vivo or oppo brand  =>db.products.find({$or:[{brand:"vivo"},{brand:"oppo"}]},{price:1})
+
+31.db.lju.aggregate([{$group:{_id:"$city",TotalMarks:{$sum:"$marks"}}},{$sort:{TotalMarks:-1}},{$project:{CityName:"$_id",TotalMarks:1,_id:0}}])
+
+32.select student whose marks are greater than or eq 80 => {$match {marks:{$gte : 80}}}
+
+33.group the selected students by city calculate avg marks of each student in each city =>{$group :{_id:"$city",TotalAverage:{$avg:"$marks"}}}
+
+34.sort --> Descending order on avg marks => {$sort:{TotalAverage:-1}}
+
+35.Display only city name & avg marks =>{$project:{CityName:"$_id",TotalAverage:1}}
+
+36.Find minimum Order amount for Each Category => {$group:{_id:"$Category",minorder:{$min:"$amount"}}}
+
+37.Display Only Category & minimum Order Amount => {$project:{_id:0,Category:"$_id",minorder:1}}
