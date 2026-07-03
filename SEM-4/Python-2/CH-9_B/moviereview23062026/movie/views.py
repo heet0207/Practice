@@ -1,5 +1,7 @@
-from django.shortcuts import redirect, render, get_object_or_404
+from django.shortcuts import redirect, render
+from django.http import HttpResponse
 from .models import Movie, Review
+from django.shortcuts import get_object_or_404
 from .forms import ReviewForm
 
 # Create your views here.
@@ -41,14 +43,14 @@ def createreview(request, movie_id):
           except ValueError:
                return render(request,
                              'createreview.html',
-                             {'form' : ReviewForm(),'error' : 'bad data' +
+                             {'form' : ReviewForm(),'error' : 'bad data'
                              'passed in'})
           
 def updatereview(request, review_id):
      review = get_object_or_404(Review, pk = review_id, user = request.user)
      if request.method == 'GET':
-          return render(request, 'updatereview.html',
-                        {'review' : review, 'form' : ReviewForm(instance = review)})
+          return render(request, 'upadtereview.html',
+                        {'review' : review, 'form' : form})
      else:
           try:
                form = ReviewForm(request.POST, instance = review)
