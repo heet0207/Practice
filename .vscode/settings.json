@@ -2,6 +2,7 @@
     "C_Cpp.errorSquiggles": "disabled",
     "cSpell.words": [
         "Ahmedabad",
+        "cgpa",
         "Chauhan",
         "conbitrib",
         "createreview",
@@ -17,8 +18,10 @@
         "Rajesh",
         "Sharma",
         "signupaccount",
+        "simplejwt",
         "upadtereview",
-        "updatereview"
+        "updatereview",
+        "viewsets"
     ],
     "python-envs.defaultEnvManager": "ms-python.python:system"
 }
