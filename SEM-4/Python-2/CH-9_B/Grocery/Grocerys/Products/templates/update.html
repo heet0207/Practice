@@ -1,0 +1,9 @@
+
+<form method="POST">
+    {% csrf_token %}
+    <!-- Manually populate value tags using object context -->
+    <input type="text" name="name" value="{{ item.name }}" required>
+    <input type="number" name="quantity" value="{{ item.quantity }}" required>
+    <textarea name="description">{{ item.description }}</textarea>
+    <button type="submit">Update Item</button>
+</form>
