@@ -73,3 +73,26 @@ Commands
 36.Find minimum Order amount for Each Category => {$group:{_id:"$Category",minorder:{$min:"$amount"}}}
 
 37.Display Only Category & minimum Order Amount => {$project:{_id:0,Category:"$_id",minorder:1}}
+
+38.Create index on age Field & retrive all Students Whose age is 20.verify Execution States => db.student.createIndex({age:1}) db.student.find({age:20}).explain("executionStates")
+Stage : IXSCAN, nReturned : 2, TotalDOCSExamined : 2.
+
+39.Drop Exiting Index.Create Compound Index on age & name.Retrive Student Whose age Is 20 & name is "XYZ" Verify States => db.students.dropIndexes() db.student.createIndex({age:1,name:-1}) db.students.find({age:20},{name:"XYZ"}).explain('executionStats') Stage : IXSCAN, nReturned : 2, TotalDOCSExamined : 2.
+
+40.Using Same Compound Index,Retrive All Students Whose Name is "ABC". verify States =>
+
+41. drop the existing compound index create partial index on marks filed for the students having the marks > 80 retrive all the students whose marks are > 80 and verify the execution statistics=>
+db.students.dropIndex({ age: 1, name: 1 })
+db.students.createIndex({ marks: 1 },{partialFilterExpression: { marks: {$gt: 80}}})
+db.students.find({ marks: { $gt: 80 } }).explain("executionStats")
+
+
+42. using the same partial index retrive all the students whose marks > 70 and verify execution statistics=>db.students.find({ marks: { $gt: 70 } }).explain("executionStats")
+
+
+
+
+
+
+
+
