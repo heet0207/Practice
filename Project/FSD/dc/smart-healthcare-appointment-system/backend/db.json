@@ -72,9 +72,25 @@
       "doctorId": 1,
       "date": "2026-07-25",
       "time": "10:00 AM",
-      "status": "Pending"
+      "status": "Confirmed"
+    },
+    {
+      "id": 2,
+      "patientId": 9,
+      "doctorId": 7,
+      "date": "2026-07-25",
+      "time": "10:00",
+      "status": "Confirmed"
+    },
+    {
+      "id": 3,
+      "patientId": 9,
+      "doctorId": 1,
+      "date": "2026-07-26",
+      "time": "11:00",
+      "status": "Confirmed"
     }
   ],
   "nextUserId": 9,
-  "nextAppointmentId": 2
+  "nextAppointmentId": 4
 }
