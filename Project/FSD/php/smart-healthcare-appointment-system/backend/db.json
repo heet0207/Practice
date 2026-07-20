@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Dr. Aisha Khan",
+      "email": "aisha@hospital.com",
+      "password": "123456",
+      "role": "doctor",
+      "specialization": "Cardiologist"
+    },
+    {
+      "id": 2,
+      "name": "Dr. Rohan Mehta",
+      "email": "rohan@hospital.com",
+      "password": "123456",
+      "role": "doctor",
+      "specialization": "Dermatologist"
+    },
+    {
+      "id": 5,
+      "name": "Dr. Neha Verma",
+      "email": "neha@hospital.com",
+      "password": "123456",
+      "role": "doctor",
+      "specialization": "Pediatrician"
+    },
+    {
+      "id": 6,
+      "name": "Dr. Karan Patel",
+      "email": "karan@hospital.com",
+      "password": "123456",
+      "role": "doctor",
+      "specialization": "Orthopedic Surgeon"
+    },
+    {
+      "id": 7,
+      "name": "Dr. Sneha Iyer",
+      "email": "sneha@hospital.com",
+      "password": "123456",
+      "role": "doctor",
+      "specialization": "Neurologist"
+    },
+    {
+      "id": 8,
+      "name": "Dr. Vikram Rao",
+      "email": "vikram@hospital.com",
+      "password": "123456",
+      "role": "doctor",
+      "specialization": "General Physician"
+    },
+    {
+      "id": 3,
+      "name": "Priya Sharma",
+      "email": "priya@gmail.com",
+      "password": "123456",
+      "role": "patient",
+      "age": 28,
+      "gender": "Female"
+    },
+    {
+      "id": 4,
+      "name": "Admin User",
+      "email": "admin@hospital.com",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 9,
+      "name": "Heet S Chauhan",
+      "email": "heetchauhan02@gmail.com",
+      "password": "heet123",
+      "role": "patient",
+      "specialization": null,
+      "age": "21",
+      "gender": "Male"
+    }
+  ],
+  "appointments": [
+    {
+      "id": 1,
+      "patientId": 3,
+      "doctorId": 1,
+      "patientName": "Priya Sharma",
+      "patientEmail": "priya@gmail.com",
+      "doctorName": "Dr. Aisha Khan",
+      "doctorSpecialization": "Cardiologist",
+      "date": "2026-07-25",
+      "time": "10:00 AM",
+      "city": "Vadodara",
+      "pincode": "390001",
+      "status": "Confirmed",
+      "cancelReason": null
+    },
+    {
+      "id": 2,
+      "patientId": 9,
+      "doctorId": 1,
+      "patientName": "Heet S Chauhan",
+      "patientEmail": "heetchauhan02@gmail.com",
+      "doctorName": "Dr. Aisha Khan",
+      "doctorSpecialization": "Cardiologist",
+      "date": "2026-07-25",
+      "time": "10:00",
+      "city": "ahmedabad",
+      "pincode": "380001",
+      "status": "Confirmed",
+      "cancelReason": null
+    }
+  ],
+  "nextUserId": 10,
+  "nextAppointmentId": 3
+}
