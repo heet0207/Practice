@@ -1,0 +1,11 @@
+Admin
+Email: admin@campusdesk.edu
+Password: admin123
+
+Teacher
+Email: teacher@campusdesk.edu
+Password: teacher123
+
+Student
+Email: student@campusdesk.edu
+Password: student123
