@@ -1,0 +1,174 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jay  - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header / Navigation -->
+    <header id="home">
+        <div class="profile-name">Jay</div>
+
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Project Details</a>
+            <a href="#skills">Skills</a>
+            <a href="#recommendations">Recommendations</a>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="about-container">
+            <img src="images/profile.jpg" alt="Heet Profile Photo" width="180">
+
+            <div>
+                <h1>Hi, I'm Jay!</h1>
+                <p>
+                    I am a passionate web development student interested in
+                    building modern and responsive websites. I enjoy learning
+                    HTML, CSS, JavaScript, Python, and Django and applying my
+                    knowledge to practical projects. My goal is to improve my
+                    development skills and create useful web applications.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                     alt="HTML5 Logo">
+                <h3>HTML5</h3>
+                <p>Web Structure</p>
+            </div>
+
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                     alt="CSS3 Logo">
+                <h3>CSS3</h3>
+                <p>Web Styling</p>
+            </div>
+
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                     alt="JavaScript Logo">
+                <h3>JavaScript</h3>
+                <p>Web Interactivity</p>
+            </div>
+
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                     alt="Python Logo">
+                <h3>Python</h3>
+                <p>Programming</p>
+            </div>
+
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                     alt="Django Logo">
+                <h3>Django</h3>
+                <p>Web Development</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Project Details</h2>
+
+        <div class="projects-container">
+
+            <div class="project">
+                <h3>Student Management System</h3>
+                <p>
+                    A Django-based web application for managing student
+                    information, attendance, assignments, marks, and results.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Healthcare Appointment System</h3>
+                <p>
+                    A web application that allows users to explore doctors
+                    and book healthcare appointments online.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Personal Portfolio Website</h3>
+                <p>
+                    A responsive portfolio website showcasing my skills,
+                    projects, achievements, and recommendations.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations">
+        <h2>Recommendations</h2>
+
+        <div id="recommendation-list">
+
+            <div class="recommendation">
+                <p>
+                    "Heet is a dedicated learner who consistently works on
+                    improving his web development skills."
+                </p>
+            </div>
+
+            <div class="recommendation">
+                <p>
+                    "Heet demonstrates good problem-solving skills and enjoys
+                    turning ideas into practical projects."
+                </p>
+            </div>
+
+            <div class="recommendation">
+                <p>
+                    "Heet is enthusiastic about learning new technologies and
+                    applying them to real-world applications."
+                </p>
+            </div>
+
+        </div>
+
+        <!-- New Recommendation Form -->
+        <div class="recommendation-form">
+            <h3>Leave a Recommendation</h3>
+
+            <textarea id="new-recommendation"
+                      placeholder="Write your recommendation here..."
+                      rows="5"></textarea>
+
+            <button type="button" onclick="addRecommendation()">
+                Submit Recommendation
+            </button>
+        </div>
+    </section>
+
+    <!-- Home Icon -->
+    <a href="#home" class="home-icon" title="Go to Home">
+        🏠
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+```
