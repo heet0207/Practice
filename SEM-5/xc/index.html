@@ -1,0 +1,186 @@
+
+[2 lines collapsed]
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heet — Portfolio</title>
+    <title>Soul Thread — Clothing for people with taste</title>
+    <meta
+      name="description"
+      content="Portfolio of Heet — building thoughtful web experiences, products, and interfaces."
+      content="Shop oversized tees, hoodies, cargos, and sneakers. Original streetwear inspired by everyday culture."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Outfit:wght@320;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <div class="announce">
+      Free shipping over ₹999 · Easy 7-day exchanges · New drop every Friday
+    </div>
+    <header class="nav">
+      <a class="nav__mark" href="#top">Heet</a>
+      <button class="icon-btn nav__burger" type="button" aria-label="Open menu" data-open-menu>
+        <span></span><span></span><span></span>
+      </button>
+      <a class="logo" href="#home">Soul Thread</a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#shop?gender=men">Men</a>
+        <a href="#shop?gender=women">Women</a>
+        <a href="#shop?category=tops">Tops</a>
+        <a href="#shop?category=bottoms">Bottoms</a>
+        <a href="#shop?category=footwear">Footwear</a>
+        <a href="#shop">All</a>
+      </nav>
+      <button class="nav__menu" type="button" aria-label="Open menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav__actions">
+        <button class="icon-btn" type="button" aria-label="Search" data-open-search>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M20 20l-3.2-3.2" />
+          </svg>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Wishlist" data-open-wishlist>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 20s-7-4.4-7-9.2A4 4 0 0 1 12 7a4 4 0 0 1 7 3.8C19 15.6 12 20 12 20z" />
+          </svg>
+          <span class="badge" data-wish-count hidden>0</span>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Cart" data-open-cart>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 7h15l-1.4 8.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.6L5 4H2" />
+            <circle cx="9" cy="20" r="1.2" fill="currentColor" />
+            <circle cx="17" cy="20" r="1.2" fill="currentColor" />
+          </svg>
+          <span class="badge" data-cart-count hidden>0</span>
+        </button>
+      </div>
+    </header>
+    <main id="top">
+      <section class="hero">
+        <p class="eyebrow">Available for new work</p>
+        <h1>
+          Design-minded developer<br />
+          <em>building calm, useful software.</em>
+        </h1>
+        <p class="lede">
+          I turn messy product ideas into clear interfaces — from first sketch to
+          a site people actually enjoy using.
+        </p>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work">See selected work</a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+        </div>
+        <dl class="stats">
+          <div>
+            <dt>Focus</dt>
+            <dd>Web · UI · products</dd>
+    <div class="search-bar" id="search-bar" hidden>
+      <input id="search-input" type="search" placeholder="Search tees, hoodies, cargos…" />
+    </div>
+    <aside class="mobile-nav" id="mobile-nav" hidden>
+      <a href="#shop?gender=men">Men</a>
+      <a href="#shop?gender=women">Women</a>
+      <a href="#shop?category=tops">Tops</a>
+      <a href="#shop?category=bottoms">Bottoms</a>
+      <a href="#shop?category=footwear">Footwear</a>
+      <a href="#shop">Shop all</a>
+    </aside>
+    <main>
+      <section id="view-home" class="view">
+        <section class="hero">
+          <div class="hero__copy">
+            <p class="eyebrow">Drop 09 · Street culture</p>
+            <h1>Wear what you actually mean.</h1>
+            <p>
+              Oversized cuts, loud graphics, and everyday staples — built like a
+              D2C clothing house, priced for real carts.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="#shop">Shop the drop</a>
+              <a class="btn btn--ghost" href="#shop?category=tops">Shop tees</a>
+            </div>
+          </div>
+          <div class="hero__visual" aria-hidden="true">
+            <img
+              src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=1400&q=80"
+              alt=""
+            />
+          </div>
+        </section>
+        <section class="cats">
+          <a class="cat" href="#shop?category=tops">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="" />
+            <span>Tops</span>
+          </a>
+          <a class="cat" href="#shop?category=bottoms">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80" alt="" />
+            <span>Bottoms</span>
+          </a>
+          <a class="cat" href="#shop?category=outerwear">
+            <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80" alt="" />
+            <span>Hoodies</span>
+          </a>
+          <a class="cat" href="#shop?category=footwear">
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80" alt="" />
+            <span>Sneakers</span>
+          </a>
+        </section>
+        <section class="strip">
+          <div>
+            <dt>Based</dt>
+            <dd>India · remote</dd>
+            <h2>Bestsellers this week</h2>
+            <p>The pieces people actually re-order.</p>
+          </div>
+          <a class="link" href="#shop">See all</a>
+        </section>
+        <div class="grid" data-home-grid></div>
+        <section class="promo">
+          <div>
+            <dt>Currently</dt>
+            <dd>Open to projects</dd>
+            <p class="eyebrow">Soul Club</p>
+            <h2>Extra 10% off. Early drops. No fuss.</h2>
+            <p>Join the club for member pricing on every drop. Dummy checkout — no payment taken.</p>
+          </div>
+        </dl>
+          <a class="btn btn--light" href="#shop">Unlock the drop</a>
+        </section>
+      </section>
+      <section id="work" class="section">
+        <div class="section__head">
+          <p class="eyebrow">Selected work</p>
+          <h2>Projects that show how I think.</h2>
+      <section id="view-shop" class="view" hidden>
+        <div class="shop-head">
+          <div>
+            <p class="eyebrow" data-shop-eyebrow>Catalog</p>
+            <h1 data-shop-title>All products</h1>
+          </div>
+          <select id="sort">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="sale">On sale</option>
+          </select>
+        </div>
+        <div class="projects">
+          <article class="project">
+            <span class="project__index">01</span>
+            <div class="project__visual" data-tone="clay"></div>
+            <div class="project__body">
+              <h3>Atlas Studio</h3>
